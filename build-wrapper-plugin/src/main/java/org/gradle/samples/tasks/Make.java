@@ -7,6 +7,7 @@ import org.gradle.api.file.DirectoryProperty;
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.provider.ListProperty;
 import org.gradle.api.provider.Provider;
+import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.InputFiles;
 import org.gradle.api.tasks.Internal;
 import org.gradle.api.tasks.OutputDirectory;
@@ -19,6 +20,7 @@ public class Make extends DefaultTask {
     private final ConfigurableFileCollection makeFiles = getProject().files();
     private final DirectoryProperty outputDirectory = getProject().getObjects().directoryProperty();
     private final RegularFileProperty binary = getProject().getObjects().fileProperty();
+    @Input
     private final ListProperty<String> arguments = getProject().getObjects().listProperty(String.class).empty();
 
     @TaskAction
