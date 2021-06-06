@@ -6,7 +6,6 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'cmake'
-
-include ":app", ":utilities", ":list"
+rootProject.name = 'gtest'
+include 'googletest-1.10.0', 'example'
 

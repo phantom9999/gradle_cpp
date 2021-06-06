@@ -1,0 +1,18 @@
+plugins {
+    id 'cpp-library'
+    id 'xcode'
+    id 'maven-publish'
+    id 'cpp-unit-test'
+}
+
+unitTest {
+    dependencies {
+        implementation project(':googletest-1.10.0')
+    }
+
+    binaries.whenElementKnown(CppTestExecutable) { binary ->
+        if (binary.targetMachine.operatingSystemFamily.linux) {
+            binary.linkTask.get().linkerArgs.add('-pthread')
+        }
+    }
+}

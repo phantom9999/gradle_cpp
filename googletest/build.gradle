@@ -2,7 +2,7 @@ allprojects {
     apply plugin: 'xcode'
     apply plugin: 'maven-publish'
 
-    group = 'org.phantom9999.cpp-samples'
+    group = 'org.phantom9999.googletest'
     version = '1.2'
 
     publishing {

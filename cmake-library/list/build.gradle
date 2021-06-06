@@ -10,17 +10,3 @@ cmake {
     binary = "src/list/liblist.a"
     includeDirectory = layout.projectDirectory.dir("src/list/include")
 }
-
-publishing {
-    repositories {
-        maven {
-            url '../repo'
-        }
-    }
-}
-
-repositories {
-    maven {
-        url("file:../../local_maven/repository")
-    }
-}

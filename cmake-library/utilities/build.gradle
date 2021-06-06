@@ -9,11 +9,3 @@ library {
         api project(":list")
     }
 }
-
-publishing {
-    repositories {
-        maven {
-            url "../repo"
-        }
-    }
-}
