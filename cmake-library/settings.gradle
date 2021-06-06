@@ -1,0 +1,17 @@
+pluginManagement {
+    repositories {
+        maven {
+            url("file:../local_maven/repository")
+        }
+    }
+}
+
+rootProject.name = 'cmake'
+
+
+include ":app", ":utilities", ":list"
+
+// These are included for convenience. Usually these plugins would be published to a plugin repository instead
+// includeBuild "build-wrapper-plugin"
+// includeBuild "custom-publication-plugin"
+

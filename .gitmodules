@@ -1,0 +1,3 @@
+[submodule "local_maven"]
+	path = local_maven
+	url = https://github.com/phantom9999/phantom9999.github.io.git
